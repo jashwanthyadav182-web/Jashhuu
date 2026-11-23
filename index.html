@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100817">
+    <title>My Little World ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Lavender dust and floating hearts -->
+    <div class="dust" id="dust"></div>
+    <div class="hearts" aria-hidden="true">
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💘</span>
+        <span>💞</span>
+        <span>❤️</span>
+        <span>💓</span>
+    </div>
+
+    <main>
+
+        <!-- SCREEN 1: WELCOME -->
+        <section id="welcomeScreen" class="screen active">
+            <div class="card">
+
+                <div class="big-icon">💝</div>
+
+                <p class="eyebrow">A LITTLE WORLD MADE FOR YOU</p>
+
+                <h1>Welcome to My Little World</h1>
+
+                <p class="description">
+                    Hey Beautiful! 🌸<br>
+                    A little surprise is waiting just for you.
+                </p>
+
+                <p class="small-text">
+                    Are you ready to discover something special?
+                </p>
+
+                <button id="loginButton" class="main-btn">
+                    Login 💗
+                </button>
+
+                <p class="footer-text">Made with lots of love ❤️</p>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 2: LOGIN -->
+        <section id="loginScreen" class="screen">
+            <div class="card">
+
+                <div class="big-icon">💌</div>
+
+                <h1>Just One Little Step</h1>
+
+                <p class="description">
+                    Enter your details to unlock your surprise!
+                </p>
+
+                <form id="loginForm">
+
+                    <label for="visitorName">Your Beautiful Name</label>
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        placeholder="Enter your name 💗"
+                        maxlength="50"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="mobileNumber">Your Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        id="mobileNumber"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        autocomplete="tel-national"
+                        required
+                    >
+
+                    <button type="submit" class="main-btn">
+                        Sign In 💖
+                    </button>
+
+                </form>
+
+                <button class="back-btn" id="loginBackButton">
+                    ← Go Back
+                </button>
+
+                <p class="footer-text">Your little surprise awaits ✨</p>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 3: PERSONAL WELCOME -->
+        <section id="greetingScreen" class="screen">
+            <div class="card">
+
+                <div class="big-icon">🥰</div>
+
+                <p class="eyebrow">A SPECIAL SURPRISE FOR YOU</p>
+
+                <h1 id="personalGreeting">Welcome! ❤️</h1>
+
+                <p class="description">
+                    Someone has prepared something special for you.
+                    <br>
+                    Are you ready to open it?
+                </p>
+
+                <div class="gift-area">
+                    <div class="gift-glow">✨</div>
+                    <div class="gift-emoji">🎁</div>
+                    <p>A little gift for you!</p>
+                </div>
+
+                <button id="rewardButton" class="main-btn">
+                    Open My Reward 💝
+                </button>
+
+                <button id="logoutButton" class="back-btn">
+                    Log Out
+                </button>
+
+                <p class="footer-text">Something magical is waiting ❤️</p>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 4: SCRATCH CARD -->
+        <section id="scratchScreen" class="screen">
+            <div class="card scratch-main-card">
+
+                <div class="big-icon">💌</div>
+
+                <p class="eyebrow">A SECRET MESSAGE</p>
+
+                <h1>Something Special For You</h1>
+
+                <p class="description">
+                    Scratch the card to discover my little secret!
+                </p>
+
+                <div class="scratch-card">
+
+                    <!-- Hidden content -->
+                    <div class="hidden-message">
+
+                        <div class="big-heart">❤️</div>
+
+                        <h2>I LOVE YOU</h2>
+
+                        <p>You are truly special to me! 🥹</p>
+
+                    </div>
+
+                    <!-- Scratch canvas -->
+                    <canvas id="scratchCanvas"
+                        aria-label="Scratch this card to reveal the message">
+                    </canvas>
+
+                </div>
+
+                <p id="scratchHint" class="scratch-hint">
+                    👆 Scratch here using your finger or mouse
+                </p>
+
+                <button id="continueButton" class="main-btn hidden">
+                    Continue ❤️
+                </button>
+
+                <button id="scratchBackButton" class="back-btn">
+                    ← Go Back
+                </button>
+
+                <p class="footer-text">Made with love ❤️</p>
+            </div>
+        </section>
+
+
+        <!-- SCREEN 5: FINAL PROPOSAL -->
+        <section id="proposalScreen" class="screen">
+            <div class="card proposal-card">
+
+                <div class="proposal-hearts">💗 💕 💗</div>
+
+                <p class="eyebrow">FROM THE BOTTOM OF MY HEART</p>
+
+                <div class="big-icon proposal-heart">❤️</div>
+
+                <h1 class="love-heading">I LOVE YOU</h1>
+
+                <h2 class="name-heading" id="proposalName">
+                    Beautiful ❤️
+                </h2>
+
+                <div class="message-box">
+                    <p>
+                        You make my world a little brighter,
+                        my smiles a little bigger, and my
+                        days a little more beautiful.
+                    </p>
+
+                    <p>
+                        I just wanted to tell you how special
+                        you are to me. I would love to know
+                        if you feel the same.
+                    </p>
+
+                    <p class="question">
+                        Will you give us a chance? 🥹
+                    </p>
+                </div>
+
+                <p class="choice-heading">
+                    Your answer matters to me ❤️
+                </p>
+
+                <a
+                    id="whatsappButton"
+                    class="main-btn whatsapp-btn"
+                    href="https://wa.me/917794997353?text=Hi%21%20I%20love%20you%20too%20jashuu%20%F0%9F%92%97"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Message Me on WhatsApp 💌
+                </a>
+
+                <button id="finalLogoutButton" class="back-btn">
+                    I'm not interested – Log Out
+                </button>
+
+                <p class="footer-text">
+                    Whatever your answer, thank you for being here. ❤️
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
